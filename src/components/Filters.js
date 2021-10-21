@@ -15,6 +15,13 @@ const Filters = ({currentName, currentTitle, isIntern, updateFormState}) => {
     updateFormState("isIntern", evt.target.checked);
   }
 
+  function resetFilters() {
+    //TODO doesn't have to call each time
+    updateFormState("currentName", "")
+    updateFormState("currentTitle", "")
+    updateFormState("isIntern", false)
+  }
+
   return (
     <form action="" id="directory-filters">
       <div className="group">
@@ -56,6 +63,13 @@ const Filters = ({currentName, currentTitle, isIntern, updateFormState}) => {
           />
           Intern
         </label>
+      </div>
+      <div className="group">
+        <input
+          type="reset"
+          value="Reset"
+          onClick={resetFilters}
+        />
       </div>
     </form>
   );
