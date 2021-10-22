@@ -30,10 +30,10 @@ const People = ({people}) => {
               key={person.id} 
               classNames="fade"
               // classNames={{
-              //   enter: 'animate',
-              //   enterActive: 'animate__zoomIn',
-              //   exit: 'animate',
-              //   exitActive: 'animate__zoomOut'
+              //   enter: 'animate_animated',
+              //   enterActive: 'animate_animated animate__zoomIn',
+              //   exit: 'animate_animated',
+              //   exitActive: 'animate_animated animate__zoomOut'
               // }}
               timeout={500}>
               <Person person={person} />

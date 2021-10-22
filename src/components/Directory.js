@@ -16,13 +16,8 @@ class Directory extends React.Component {
     this.updateFormState = this.updateFormState.bind(this)
   }
 
-  updateFormState(name, val) {
-    this.setState(
-      {
-        [name]: val
-      },
-      this.updatePeopleList
-    )
+  updateFormState(obj) {
+    this.setState(obj, this.updatePeopleList)
   }
 
   updatePeopleList() {

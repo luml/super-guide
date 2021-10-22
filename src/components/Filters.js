@@ -4,22 +4,29 @@ const Filters = ({currentName, currentTitle, isIntern, updateFormState}) => {
   var titles = window.LMDirectory.titles;
 
   function updateName(evt) {
-    updateFormState("currentName", evt.target.value);
+    updateFormState({
+      currentName: evt.target.value
+    });
   }
 
   function updateTitle(evt) {
-    updateFormState("currentTitle", evt.target.value);
+    updateFormState({
+      currentTitle: evt.target.value
+    });
   }
 
   function updateIntern(evt) {
-    updateFormState("isIntern", evt.target.checked);
+    updateFormState({
+      isIntern: evt.target.checked
+    });
   }
 
   function resetFilters() {
-    //TODO doesn't have to call each time
-    updateFormState("currentName", "")
-    updateFormState("currentTitle", "")
-    updateFormState("isIntern", false)
+    updateFormState({
+      currentName: "",
+      currentTitle: "",
+      isIntern: false
+    })
   }
 
   return (
